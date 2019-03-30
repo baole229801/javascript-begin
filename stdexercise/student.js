@@ -12,4 +12,8 @@ Student.prototype.ask = function() {
 	this.gender = readlineSync.question('Gender: ');
 };
 
+Student.prototype.averageScore = function(first_argument) {
+	this.score = 10;
+};
+
 module.exports = Student;
