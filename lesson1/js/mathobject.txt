@@ -1,0 +1,29 @@
+// Math Object in JavaScript
+// Math.PI
+// Math.ceil(number) : lam tron len
+// Math.floor() : lam tron xuong
+// Math.max(a, b, c,...)
+// Math.min(a, b, c,...)
+// Math.randon() ramdon trong khoang 0 1
+
+function circleArea(r) {
+  return r * r * Math.PI;
+}
+//console.log(circleArea(1));
+console.log(Math.PI);
+
+//Math.random();
+function tossCoin() {
+  var random = Math.random();
+  console.log(random);
+  return random >= 0.5;
+};
+console.log('Mat sap:', tossCoin());
+
+var rollDice = {
+  sides : 6,
+  roll : function() {
+    var random = Math.floor(Math.random() * rollDice.sides + 1);
+    return random;
+  }
+};

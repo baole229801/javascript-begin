@@ -1,0 +1,29 @@
+//efficient
+var totalValue1 = products.reduce(function(currentValue, product){
+  return currentValue + product.quantity * product.unitPrice;
+}, 0); // 0 -. dua tren gia tri cuoi cung
+console.log(totalValue1);
+
+
+// old way
+var arrVal = [];
+console.log(catalogueSort);
+for (var member of products) {
+  member.eachValue = member.unitPrice * member.quantity;
+  arrVal.push(member.eachValue);
+}
+//products;
+console.log(arrVal);
+var totalValue = arrVal.reduce(function (a, b) {
+  return a + b;
+})
+
+
+var contacts = ['bao peo', 'duy peo', 'tung peo', 'nhan peo'];
+
+var contactLine = contacts.reduce(function(emptyspace, name){
+  console.log(emptyspace, name);
+  return emptyspace + '<' + name +'>';
+}, '');
+
+console.log(contactLine);

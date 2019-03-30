@@ -1,0 +1,23 @@
+var rollDice = {
+  sides: 6,
+  roll: function(){
+    var dice1 = Math.floor(Math.random() * rollDice.sides + 1);
+    var dice2 = Math.floor(Math.random() * rollDice.sides + 1);
+    return console.log('lets roll out:', dice1, dice2);
+  } 
+}
+rollDice.roll();
+
+var jail = function(onFinish) {
+  var dbl = 0;
+  onFinish();
+  if (rollDice.dice1 === rollDice.dice2) {
+    dbl++;
+    if(dbl % 3 === 0) {
+      console.log('jail');
+    };
+  };
+
+}
+
+gotJail(function rollDice.roll);

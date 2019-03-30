@@ -1,0 +1,21 @@
+var listOfMember = [
+  {name:'Le Trong Dung', age: 46, position:'father'},
+  {name:'Vo Thi Ha', age: 45,position:'mother'},
+  {name:'Le Thi Tra Mi',age: 23, position:'sister'},
+  {name:'Le Trong Bao', age: 21, position:'brother'}
+];
+
+for(var i = 0;i<3;i++){
+  console.log(listOfMember[i]);
+}
+for( var member of listOfMember){
+  console.log(member.name);
+}
+for(var key in listOfMember[2]) {
+  console.log(key);
+  console.log(key, listOfMember[2][key]);
+}
+
+function highArray(max) {
+	
+}

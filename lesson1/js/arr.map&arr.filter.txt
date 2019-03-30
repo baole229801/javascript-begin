@@ -1,0 +1,22 @@
+// *Array Filter
+
+var listScore = [
+  {name: 'duy', score: 9},
+  {name: 'bao', score: 6.5},
+  {name: 'tung', score: 8},
+  {name : 'nhan', score: 9}
+];
+
+var studentClassify = listScore.map(function(x) {
+  if(x.score >= 8) {
+    this.level = 'A'
+    return console.log(x.name, 'level', this.level)
+  }
+  else return console.log(':(');
+})
+studentClassify;
+
+var studentKik = listScore.filter(function(item){
+  return item.score >= 9;
+})
+studentKik;

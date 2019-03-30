@@ -1,0 +1,35 @@
+// Sort array
+
+// array.sort
+// if sort function
+//      return a value < 0 
+//          a will come before b
+//      return a value > 0
+//          a will come after b
+//      else = 0 unchanged
+
+
+var numbers = [1, 2, 6, 7, 8, 9];
+
+var ascendingNumber = numbers.sort(function(a, b){
+  //a = 2, b = 6
+  return a - b;
+})
+//var descendingNumber = numbers.sort(function(a, b){
+  //a = 2, b = 6
+//  return b - a;
+//})
+console.log(ascendingNumber);
+//console.log(descendingNumber);
+
+var employees = [
+  {name: 'bao le', age: 21},
+  {name: 'chieu chan', age: 25},
+  {name: 'linh san', age: 22},
+  {name: 'rin chan', age: 30}
+];
+
+var ascendingAge = employees.sort(function(a, b){
+  return a.age - b.age;
+});
+console.log(ascendingAge);

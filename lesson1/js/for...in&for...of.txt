@@ -1,0 +1,27 @@
+// for...of, for...in
+
+var listOfEmployees = [
+  { name: 'Bao le', year: 3, position: 'Boss' },
+  { name: 'Thanh map', year: 1, position: 'Secretary' },
+  { name: 'Duy peo', year: 2, position: 'IT Consultant' },
+  { name: 'Tung peo', year: 1, position: 'CTO' }
+];
+
+for (var i = 0; i < 4; i++) {
+  console.log(listOfEmployees[i]);
+}
+
+//var content = '';
+//for (var employee of listOfEmployees) {
+//content += '<li>' + employee.name + '<li>';
+//}
+
+var myDog = {
+  name: 'Doggo',
+  type: 'Husky',
+  age: 5
+};
+for(var key in myDog){
+  //console.log(key);
+  console.log(key, myDog[key]);
+}

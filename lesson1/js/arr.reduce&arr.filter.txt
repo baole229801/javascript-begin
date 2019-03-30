@@ -1,0 +1,39 @@
+var products = [
+  { name: 'laptop', unitPrice: 2000, quantity: 10, catalogue: 'Electrical Goods' },
+  { name: 'shoes', unitPrice: 150, quantity: 100, catalogue: 'Outfits' },
+  { name: 'iron', unitPrice: 50, quantity: 47, catalogue: 'Household Goods' },
+  { name: 'Beer', unitPrice: 10, quantity: 1000, catalogue: 'Beverage' },
+  { name: 'mouse', unitPrice: 200, quantity: 15, catalogue: 'Electrical Goods' },
+  { name: 'trousers', unitPrice: 300, quantity: 100, catalogue: 'Outfits' },
+];
+
+var catalogueSort = products.filter(function (item) {
+  return item.catalogue === 'Electrical Goods';
+});
+var arrVal = [];
+console.log(catalogueSort);
+for (var member of products) {
+  member.eachValue = member.unitPrice * member.quantity;
+  arrVal.push(member.eachValue);
+}
+//products;
+console.log(arrVal);
+var totalValue = arrVal.reduce(function (a, b) {
+  return a + b;
+})
+console.log('Total Amount Left:', totalValue);
+
+var bigValueLeft = products.filter(function (product) {
+  if (product.eachValue >= 20000) {
+    console.log(product.catalogue);
+  }
+});
+//console.log(bigValueLeft);
+
+for (var i = 0; i < 7; i++) {
+  if (products[i].catalogue === products[i + 1].catalogue) {
+    var products[i].catalogueVal = products[i].eachValue + products[i + 1].eachValue;
+    i++;
+  }
+};
+products;

@@ -1,0 +1,61 @@
+var a = ['a', 'c', 'd', 1];
+var b = ['f', 'var', 'func', 5, 6];
+var c = 'sheep';
+var numbers = [0, 1, 5, 6];
+
+//*concat
+//  a.concat(b);
+//  var c = a.concat(b, a[3]);
+//  console.log(c.length);
+
+//*push
+//  console.log(a.push(c, b[2]));
+//  console.log(a);
+
+var sports = ['basketball', 'soccer', 'football', 'swimming'];
+var moreSports = ['rugby', 'cycling', 'running'];
+// similar to sports.push('rugby', 'cycling', 'running')
+Array.prototype.push.apply(sports, moreSports);
+sports;
+//var max = Math.max.apply(null, numbers);
+//var min = Math.min.apply(null, numbers);
+//console.log(Math.max.call(min, max));
+
+var obj = {
+  length: 0,
+  //width: 0,
+
+  addElem: function addElem(elem) {
+    Array.prototype.push.call(this, elem);
+  }
+}
+obj.addElem(numbers[2]);
+obj.addElem(sports);
+console.log(obj.length);
+//console.log(obj.width);
+
+var listOfOlimpicSports = {
+  length: 6,
+  add: function addSports(sport) {
+    [].pop.call(this, sport);
+  }
+}
+console.log(moreSports.length);
+listOfOlimpicSports.add(3);
+console.log(listOfOlimpicSports.length);
+
+//*pop
+var sportAbandon = sports.pop();
+sportAbandon;
+
+console.log('Sports before', sports);
+var shifted = sports.shift();
+console.log('Sports after', sports);
+console.log('Remove', shifted);
+
+var newSport = ['Fighting', 'Waterball', 'Pencak Silat'];
+var unshifted = sports.unshift(newSport);
+console.log(sports);
+
+sports.slice(,-2);
+console.log(sports);

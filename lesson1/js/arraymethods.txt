@@ -1,0 +1,8 @@
+// Cac Methods cua mot Array
+// - a.concat(b) -> noi hai array voi nhau
+// - a.push(b) -> cho phan tu moi vao trong mang o vi tri cuoi cung tra ve do dai length
+// - a.pop() -> lay ra phan tu cuoi va thay doi mang, tra ve phan tu bi day ra
+// - a.shift() -> day phan tu dau tien ra khoi mang va thay doi mang tra ve gia tri bi day ra
+// - a.unshift() -> nhet mot vao dau mang, tra ve do dai mang
+
+//- a.slice & a.splice

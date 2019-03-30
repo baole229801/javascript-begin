@@ -1,0 +1,28 @@
+var products = [
+  { name: 'laptop', unitPrice: 2000, quantity: 10, catalogue: 'Electrical Goods' },
+  { name: 'shoes', unitPrice: 150, quantity: 100, catalogue: 'Outfits' },
+  { name: 'iron', unitPrice: 50, quantity: 47, catalogue: 'Household Goods' },
+  { name: 'beer', unitPrice: 10, quantity: 1000, catalogue: 'Beverage' },
+  { name: 'mouse', unitPrice: 200, quantity: 15, catalogue: 'Electrical Goods' },
+  { name: 'trousers', unitPrice: 300, quantity: 100, catalogue: 'Outfits' },
+];
+
+var priceSort = products.sort(function (a, b) {
+  return a.unitPrice - b.unitPrice;
+});
+console.log('*sorted list of products price:')
+for (var member of priceSort) {
+  console.log(member.name + ':' + member.unitPrice);
+}
+
+for (var member of products) {
+  member.instockValue = member.unitPrice * member.quantity; 
+};
+//products;
+var valueSort = products.sort(function(a, b){
+  return a.instockValue - b.instockValue;
+});
+console.log('*sorted list of in stock value: ');
+for (var member of valueSort) {
+  console.log(member.name + ':' + member.instockValue);
+}

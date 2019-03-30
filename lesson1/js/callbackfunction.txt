@@ -1,0 +1,16 @@
+// Callback function
+var coffeeMachine = {
+  makingCoffee: function(onFinish) { // naming convention
+    console.log('Making coffee progressing...');
+    onFinish();
+  }
+};
+
+//var beep = function() {
+//  console.log('bit bit');
+//}
+//coffeeMachine.makingCoffee(beep);
+coffeeMachine.makingCoffee(function beep(){
+  console.log('tit tit');
+});
+

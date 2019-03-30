@@ -1,0 +1,20 @@
+var myDog = {
+  name: 'Doggo',
+  age: 1,
+  weight: 5,
+  type: 'Husky',
+  bark: function () { //anynomous function
+    console.log('Meow Meow, my name is', this.name);
+  }
+  eat: function (bone) {
+    this.weight = this.weight + bone.weight;
+    return this.weigtht;
+  }
+}
+
+var bone = {
+  weight : 0.01;
+}
+
+myDog.bark();
+console.log("Dog's weight is",myDog.weight);

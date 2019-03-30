@@ -1,0 +1,25 @@
+// tom and jerry
+
+var myCat = {
+  name: 'tom',
+  stomach: [],
+  eat: function(mouse) {
+        this.stomach.push(mouse);
+        return this;
+  }
+}
+//var m1 = {name: 'mouse1'};
+//var m2 = {name: 'mouse2'};
+//var m3 = {name: 'mouse3'};
+
+function Mouse(name, color) {
+  this.type = 'small';
+  this.name = name;
+  this.color = color;
+};
+var m1 = new Mouse('mouse1', 'white');
+var m2 = new Mouse('mouse2', 'black');
+var m3 = new Mouse('mouse3', 'grey');
+
+myCat.eat(m1).eat(m2).eat(m3);
+

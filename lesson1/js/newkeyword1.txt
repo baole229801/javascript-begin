@@ -1,0 +1,26 @@
+// 'new' keyword
+// create new object using 'new' keyword
+
+//var today = new Date();
+
+var myMouse = {
+  weight: 0.2
+}; //creating object literel
+
+// constructor function
+function Mouse(color, weight) {
+  this.type = 'mouse';
+  this.color = color;
+  this.weight = weight;
+};
+
+var mouse1 = new Mouse('white', 0.2);
+var mouse2 = new Mouse('black');
+//var mouse2 = {
+//  type: 'mouse'
+//};
+
+console.log(mouse1);
+console.log(mouse2);
+
+

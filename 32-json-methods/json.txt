@@ -1,0 +1,5 @@
+// JSON object
+// 1. Stringify - convert object to a JSON string
+// 2. parse - convert JSON string to an object
+
+

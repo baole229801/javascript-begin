@@ -1,0 +1,22 @@
+var myHonda = {
+  name: 'Winner',
+  type: 'cub',
+  color: 'orange&black',
+  engine: {
+    cyclinder: 'DOHC',
+    weight: 2.2,
+  }
+}
+var arr = [];
+for( var key in myHonda) {
+  var val = myHonda[key];
+  arr.push(val);
+}
+//console.log(arr)
+
+
+var myMotor = [myHonda, 'mint condition', 'purchased 2017'];
+var conditionElem = myMotor.slice(-2);
+var newMotor = myMotor.slice(0, 2);
+
+console.log('My Motor = ', arr.concat(conditionElem));
